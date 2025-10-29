@@ -33,17 +33,16 @@ while ejecutando:
             if evento.key == pygame.K_ESCAPE:
                 ejecutando = False
             
-            # [span_18](start_span)Cambiar color con 'R'[span_18](end_span)
+            # Cambiar color con R
             if evento.key == pygame.K_r:
                 color_casa_actual = COLOR_ROJO
-            # [span_19](start_span)Cambiar color con 'B'[span_19](end_span)
-            if evento.key == pygame.K_b:
+            # Cambiar color con B            if evento.key == pygame.K_b:
                 color_casa_actual = COLOR_AZUL
 
     # --- Lógica de Dibujo ---
     pantalla.fill(COLOR_FONDO)
 
-    # [span_20](start_span)Dibujar las primitivas que forman la casa[span_20](end_span)
+    # Dibujar las primitivas que forman la casa
 
     # Cuerpo (Rectángulo) - Usa el color variable
     pygame.draw.rect(pantalla, color_casa_actual, (300, 300, 200, 200))
@@ -61,4 +60,5 @@ while ejecutando:
 
 # --- Salir ---
 pygame.quit()
+
 sys.exit()
