@@ -40,7 +40,7 @@ while ejecutando:
     # Actualizar el ángulo
     angulo += VELOCIDAD_ANGULAR
 
-    # [span_26](start_span)Calcular la nueva posición usando trigonometría[span_26](end_span)
+    # Calcular la nueva posición usando trigonometría
     # x = centro_x + cos(angulo) * radio
     # y = centro_y + sin(angulo) * radio
     nueva_x = CENTRO_X + math.cos(angulo) * RADIO
@@ -61,4 +61,5 @@ while ejecutando:
 
 # --- Salir ---
 pygame.quit()
+
 sys.exit()
