@@ -23,7 +23,7 @@ reloj = pygame.time.Clock()
 # Definir el rectángulo
 rectangulo = pygame.Rect(375, 275, 50, 50)
 
-# [span_27](start_span)Lista para almacenar las posiciones del rastro[span_27](end_span)
+# Lista para almacenar las posiciones del rastro
 posiciones_rastro = []
 
 # --- Bucle Principal ---
@@ -38,7 +38,7 @@ while ejecutando:
                 ejecutando = False
 
     # --- Lógica de Movimiento ---
-    # [span_28](start_span)Mover el rectángulo con el teclado[span_28](end_span)
+    # Mover el rectángulo con el teclado
     teclas = pygame.key.get_pressed()
     if teclas[pygame.K_LEFT]:
         rectangulo.x -= VELOCIDAD
@@ -52,7 +52,7 @@ while ejecutando:
     # Mantener dentro de la pantalla
     rectangulo.clamp_ip(pantalla.get_rect())
 
-    # [span_29](start_span)Añadir la posición central actual a la lista de rastro[span_29](end_span)
+    # Añadir la posición central actual a la lista de rastro
     posiciones_rastro.append(rectangulo.center)
 
     # Limitar la longitud del rastro
@@ -62,7 +62,7 @@ while ejecutando:
     # --- Lógica de Dibujo ---
     pantalla.fill(COLOR_FONDO)
 
-    # [span_30](start_span)Dibujar el rastro[span_30](end_span)
+    # Dibujar el rastro
     for pos in posiciones_rastro:
         pygame.draw.circle(pantalla, COLOR_RASTRO, pos, RADIO_RASTRO)
 
@@ -77,4 +77,5 @@ while ejecutando:
 
 # --- Salir ---
 pygame.quit()
+
 sys.exit()
