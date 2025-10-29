@@ -8,7 +8,7 @@ TITULO_VENTANA = "Movimiento con Límites"
 
 COLOR_FONDO = (0, 0, 0) # Negro
 COLOR_NORMAL = (0, 255, 0) # Verde
-COLOR_BORDE = (255, 0, 0) # Rojo[span_21](end_span)
+COLOR_BORDE = (255, 0, 0) # Rojo
 
 VELOCIDAD = 5
 
@@ -44,7 +44,7 @@ while ejecutando:
     if teclas[pygame.K_DOWN]:
         rectangulo.y += VELOCIDAD
 
-    # [span_22](start_span)Asegurarse de que el rectángulo no se salga de la ventana[span_22](end_span)
+    # Asegurarse de que el rectángulo no se salga de la ventana
     if rectangulo.left < 0:
         rectangulo.left = 0
     if rectangulo.right > ANCHO_VENTANA:
@@ -54,7 +54,7 @@ while ejecutando:
     if rectangulo.bottom > ALTO_VENTANA:
         rectangulo.bottom = ALTO_VENTANA
 
-    # [span_23](start_span)Comprobar si toca los bordes y cambiar de color[span_23](end_span)
+    # Comprobar si toca los bordes y cambiar de color
     toca_borde = (rectangulo.left == 0 or 
                   rectangulo.right == ANCHO_VENTANA or 
                   rectangulo.top == 0 or 
@@ -77,4 +77,5 @@ while ejecutando:
 
 # --- Salir ---
 pygame.quit()
+
 sys.exit()
