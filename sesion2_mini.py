@@ -36,7 +36,8 @@ while ejecutando:
             # Cambiar color con R
             if evento.key == pygame.K_r:
                 color_casa_actual = COLOR_ROJO
-            # Cambiar color con B            if evento.key == pygame.K_b:
+            # Cambiar color con B            
+            if evento.key == pygame.K_b:
                 color_casa_actual = COLOR_AZUL
 
     # --- Lógica de Dibujo ---
@@ -62,3 +63,4 @@ while ejecutando:
 pygame.quit()
 
 sys.exit()
+
